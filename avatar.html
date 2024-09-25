@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem com Pontos de Interesse</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Impede a rolagem */
+            background-color: #000; /* Fundo preto */
+        }
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que a imagem cubra a tela */
+        }
+        .poi {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(0, 0, 255, 0.5); /* Azul meio transparente */
+            border: 2px solid rgba(0, 0, 255, 0.8); /* Borda azul mais forte */
+            border-radius: 50%;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+        }
+        .poi:hover {
+            background-color: rgba(0, 255, 0, 0.5); /* Verde meio transparente no hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="Designer.jpeg" alt="Imagem com Pontos de Interesse">
+        <!-- Exemplo de ponto de interesse com coordenadas em pixels -->
+        <div class="poi" style="top: 550px; left: 776px;" onclick="window.location.href='gerador.html'"></div>
+        <div class="poi" style="top: 389px; left: 1300px;" onclick="showInfo('Primeiro Ponto de Interesse')"></div>
+        <div class="poi" style="top: 337px; left: 872px;" onclick="showInfo('Primeiro Ponto de Interesse')"></div>
+        <div class="poi" style="top: 337px; left: 678px;" onclick="showInfo('Primeiro Ponto de Interesse')"></div>
+        <div class="poi" style="top: 262px; left: 775px;" onclick="showInfo('Primeiro Ponto de Interesse')"></div>
+        <div class="poi" style="top: 120px; left: 775px;" onclick="showInfo('Primeiro Ponto de Interesse')"></div>
+        <div class="poi" style="top: 383px; left: 775px;" onclick="showInfo('Primeiro Ponto de Interesse')"></div>
+        <div class="poi" style="top: 683px; left: 898px;" onclick="showInfo('Segundo Ponto de Interesse')"></div>
+        <div class="poi" style="top: 683px; left: 662px;" onclick="showInfo('Segundo Ponto de Interesse')"></div>
+        <div class="poi" style="top: 776px; left: 782px;" onclick="showInfo('Segundo Ponto de Interesse')"></div>
+        <div class="poi" style="top: 683px; left: 782px;" onclick="showInfo('Segundo Ponto de Interesse')"></div> 
+        <div class="poi" style="top: 816px; left: 916px;" onclick="showInfo('Segundo Ponto de Interesse')"></div> 
+        <div class="poi" style="top: 816px; left: 649px;" onclick="showInfo('Segundo Ponto de Interesse')"></div> 
+    </div>
+
+    <script>
+        function showInfo(info) {
+            alert(info);
+        }
+    </script>
+</body>
+</html>
